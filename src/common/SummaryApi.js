@@ -27,12 +27,12 @@ const SummaryApi = {
   // Booking API – dùng /bookings vì server mount ở đó
   booking: {
     create: async (data) => {
-      const token = localStorage.getItem("token");
+      // const token = localStorage.getItem("token");
       const res = await fetch(`${baseURL}/api/bookings/create-booking`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
+          // Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify(data),
       });
